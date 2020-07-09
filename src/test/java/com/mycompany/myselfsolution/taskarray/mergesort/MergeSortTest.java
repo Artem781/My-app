@@ -24,8 +24,13 @@ class MergeSortTest {
                 new Event(2020, 1, 1, "G"),  // 6
                 new Event(2020, 1, 11, "H"),  // 7
         };
-        Comparator<Event> comparatorByDay = Comparator.comparingInt(Event::getDay);
-        MergeSort.mergeSort(actual, comparatorByDay);
+// 1.
+//        Comparator<Event> comparatorByDay = Comparator.comparingInt(Event::getDay);
+//        MergeSort.mergeSort(actual, comparatorByDay);
+// 2.
+//        MergeSort.mergeSort(actual, ((o1, o2) -> o1.getDay() - o2.getDay()));
+// 3.
+        MergeSort.mergeSort(actual, (Comparator.comparingInt(Event::getDay)));
         Event[] expected = new Event[]{
                 new Event(2020, 1, 1, "G"),  // 6
                 new Event(2020, 1, 2, "D"),  // 3
@@ -38,6 +43,7 @@ class MergeSortTest {
         };
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     void positive_mergeSortSameValuesArray() {
         Event[] actual = new Event[]{

@@ -37,7 +37,6 @@ public class TreeHeight {
     }
 
 
-
     public static int findTreeHeight(int quantityTreeTops, int[][] edges) {
         Vector<Integer>[] peak = new Vector[quantityTreeTops];
         for (int i = 0; i < peak.length; i++) {
@@ -57,5 +56,7 @@ public class TreeHeight {
         int height = 1;
         dfs(peak, 0, visited, height, heightVertexArray);
         return Arrays.stream(heightVertexArray).max().getAsInt();
+
     }
+
 }
