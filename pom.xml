@@ -23,7 +23,7 @@
         <!--    <maven.compiler.source>1.7</maven.compiler.source>-->
         <!--    <maven.compiler.target>1.7</maven.compiler.target>-->
         <maven.compiler.release>9</maven.compiler.release>
-        <hibernate-version>5.4.10.Final</hibernate-version>
+        <hibernate-version>5.4.24.Final</hibernate-version>
     </properties>
 
     <dependencies>
